@@ -102,9 +102,12 @@ nav {
 }
 .logo {
     width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .logo img {
-    width: 80%;
+    width: 60%;
 }
 .links {
     width: 60%;
@@ -134,7 +137,9 @@ nav {
 .container {
     display: flex;
 }
-
+.container p {
+    text-align: justify;
+}
 .container div {
     width: 50%;
 }
@@ -184,4 +189,73 @@ footer h3 {
 }
 .copyright {
     text-align: right;
+}
+
+/* media queries --remember to nest css inside--*/
+
+/* tablet */
+@media(max-width: 800px) {
+    #about {
+        background-position: left;
+    }
+    #about div {
+        margin-top: 8%;
+        margin-right: 3%;
+        width: 35%;
+    }
+    .container .text div{
+        width: 80%;
+    }
+    .img-wrapper {
+        width: 70%;
+    }
+}
+
+/* phone */
+@media(max-width: 500px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        width: 20%;
+    }
+    .links {
+        width: 100%;
+    }
+    #about {
+        justify-content: flex-start;
+    }
+    #about div {
+        flex-direction: flex-start;
+        margin-left: 10%;
+        width: 40%;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .mobile {
+        flex-direction: column-reverse;
+    }
+    .container div {
+        width: 80%;
+    }
+    .bg {
+        height: 60vh;
+    }
+    .footer-parent {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .left, .right{
+        width: 80%;
+    }
+    .text-container {
+        text-align: center;
+    }
+    .copyright {
+        text-align: center;
+        margin: 0;
+    }
 }
